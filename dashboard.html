@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>School Management Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2>📘 SchoolSys</h2>
+
+        <button onclick="showSection('students')">Students</button>
+        <button onclick="showSection('grades')">Grade Settings</button>
+        <button onclick="logout()">Logout</button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- STUDENTS SECTION -->
+        <div id="studentsSection">
+
+            <h2>Student Management</h2>
+
+            <!-- Term Selection -->
+            <div>
+                <label><strong>Select Term:</strong></label>
+                <select id="termSelect" onchange="applyFilters()">
+                    <option value="1st Term">1st Term</option>
+                    <option value="2nd Term">2nd Term</option>
+                    <option value="3rd Term">3rd Term</option>
+                </select>
+            </div>
+
+            <hr>
+
+            <!-- Add Student Form -->
+            <div class="form-section">
+                <input type="text" id="studentName" placeholder="Student Name">
+
+                <div id="subjectsContainer">
+                    <div class="subject-row">
+                        <input type="text" class="subjectName" placeholder="Subject Name">
+                        <input type="number" class="subjectScore" placeholder="Score">
+                    </div>
+                </div>
+
+                <button onclick="addSubject()">+ Add Subject</button>
+                <button onclick="addStudent()">Save Student</button>
+            </div>
+
+            <hr>
+
+            <!-- Search + Filter + Sort -->
+            <div class="control-section">
+                <input type="text" id="searchInput" placeholder="Search by name" onkeyup="applyFilters()">
+
+                <select id="statusFilter" onchange="applyFilters()">
+                    <option value="all">All Status</option>
+                    <option value="Pass">Pass</option>
+                    <option value="Fail">Fail</option>
+                </select>
+
+                <select id="sortOption" onchange="applyFilters()">
+                    <option value="default">Sort By</option>
+                    <option value="nameAsc">Name (A–Z)</option>
+                    <option value="nameDesc">Name (Z–A)</option>
+                    <option value="avgAsc">Average (Low–High)</option>
+                    <option value="avgDesc">Average (High–Low)</option>
+                </select>
+            </div>
+
+            <!-- Student Table -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Subjects</th>
+                        <th>Average</th>
+                        <th>GPA</th>
+                        <th>Cumulative GPA</th>
+                        <th>Rank</th>
+                        <th>Status</th>
+                        <th>Promotion</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="studentTable">
+                </tbody>
+            </table>
+
+        </div>
+
+        <!-- GRADE SETTINGS SECTION -->
+        <div id="gradesSection" style="display:none;" class="grade-settings-section">
+
+            <h2>Grade Classification Settings</h2>
+
+            <div id="gradeContainer">
+                <div class="grade-row">
+                    <input type="number" class="minScore" placeholder="Min Score">
+                    <input type="number" class="maxScore" placeholder="Max Score">
+                    <input type="text" class="gradeLetter" placeholder="Grade">
+                </div>
+            </div>
+
+            <button onclick="addGradeRow()">+ Add Grade Range</button>
+            <button onclick="saveGradeSettings()">Save Grade Settings</button>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
