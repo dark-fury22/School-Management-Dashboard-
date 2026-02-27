@@ -40,12 +40,12 @@ A full-featured front-end school management system built with HTML5, CSS3, and J
 
 ## 📸 Screenshot
 
-![Dashboard Screenshot](screenshot.png)  
+![Dashboard Screenshot](IMG_1591.jpeg)  
 ---
 
 ## 🚀 Live Demo
 
-[View Live Demo](#)  
+[View Live Demo](https://dark-fury22.github.io/School-Management-Dashboard-/dashboard.html)  
 
 
 ---
