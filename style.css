@@ -1,0 +1,211 @@
+/* Base Styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #F7F0F0;
+    color: #25671E;
+}
+
+/* Dashboard Layout */
+.dashboard {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    background-color: #25671E;
+    color: #F7F0F0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar h2 {
+    margin-bottom: 30px;
+    color: #F2B50B;
+    text-align: center;
+}
+
+.sidebar button {
+    margin-bottom: 10px;
+    padding: 12px;
+    background-color: #48A111;
+    border: none;
+    color: #F7F0F0;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.3s;
+}
+
+.sidebar button:hover {
+    background-color: #F2B50B;
+    color: #25671E;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+/* Form Section */
+.form-section input,
+.form-section select {
+    padding: 8px 10px;
+    margin: 5px 0;
+    border: 1px solid #25671E;
+    border-radius: 4px;
+}
+
+.form-section button {
+    padding: 8px 15px;
+    margin: 5px 5px 15px 0;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: #F7F0F0;
+    background-color: #48A111;
+    transition: background 0.3s;
+}
+
+.form-section button:hover {
+    background-color: #F2B50B;
+    color: #25671E;
+}
+
+/* Control Section (Search / Filter / Sort) */
+.control-section input,
+.control-section select {
+    padding: 8px 10px;
+    margin: 5px 10px 15px 0;
+    border: 1px solid #25671E;
+    border-radius: 4px;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: #F7F0F0;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #48A111;
+    text-align: left;
+}
+
+th {
+    background-color: #48A111;
+    color: #F7F0F0;
+}
+
+.pass { color: #25671E; font-weight: bold; }
+.fail { color: #F2B50B; font-weight: bold; }
+
+/* Buttons in Table */
+table button {
+    padding: 5px 8px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #F7F0F0;
+    background-color: #25671E;
+    transition: 0.3s;
+}
+
+table button:hover {
+    background-color: #F2B50B;
+    color: #25671E;
+}
+
+/* Grade Settings Section */
+.grade-settings-section input {
+    padding: 8px 10px;
+    margin: 5px;
+    border: 1px solid #25671E;
+    border-radius: 4px;
+}
+
+.grade-settings-section button {
+    padding: 8px 12px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: #F7F0F0;
+    background-color: #48A111;
+    transition: background 0.3s;
+}
+
+.grade-settings-section button:hover {
+    background-color: #F2B50B;
+    color: #25671E;
+}
+
+/* Login Page */
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #F7F0F0;
+}
+
+.login-box {
+    background-color: #25671E;
+    padding: 40px;
+    border-radius: 10px;
+    color: #F7F0F0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    width: 300px;
+    text-align: center;
+}
+
+.login-box h2 {
+    color: #F2B50B;
+}
+
+.login-box input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #48A111;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #48A111;
+    color: #F7F0F0;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-box button:hover {
+    background-color: #F2B50B;
+    color: #25671E;
+}
+
+/* Responsive */
+@media(max-width: 768px){
+    .dashboard {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
